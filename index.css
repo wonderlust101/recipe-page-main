@@ -45,12 +45,14 @@ h1, h2, h3, p, li {
 h1 {
     font-family: 'Young Serif Regular', serif;
     font-size: 40px;
+    font-weight: 500;
     color: rgba(49, 46, 44, 1);
 }
 
 h2 {
     font-family: 'Young Serif Regular', serif;
     font-size: 28px;
+    font-weight: 500;
     color: rgba(133, 70, 50, 1);
 }
 
