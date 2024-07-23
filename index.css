@@ -37,7 +37,7 @@ img {
     border-radius: 12px;
 }
 
-h1, h2, h3, p, li {
+h1, h2, p, li {
     line-height: 100%;
     letter-spacing: 0;
 }
@@ -56,10 +56,6 @@ h2 {
     color: rgba(133, 70, 50, 1);
 }
 
-h3 {
-    font-size: 20px;
-    color: rgba(122, 40, 78, 1);
-}
 
 p, li {
     font-size: 16px;
@@ -111,7 +107,15 @@ hr {
     border-radius: 12px;
 }
 
-.steps{
+.prep-time-header {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: rgba(122, 40, 78, 1);
+}
+
+.steps {
     display: flex;
     flex-direction: column;
     gap: 8px;
