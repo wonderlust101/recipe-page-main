@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'Young Serif Regular';
+    src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Oufit Regular';
+    src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oufit Regular', sans-serif;
+    background-color: rgba(243, 229, 215, 1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 736px;
+    margin: 5% auto;
+    padding: 40px;
+    background-color: white;
+    gap: 40px;
+    border-radius: 24px;
+}
+
+img {
+    height: 300px;
+    border-radius: 12px;
+}
+
+h1, h2, h3, p, li {
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+h1 {
+    font-family: 'Young Serif Regular', serif;
+    font-size: 40px;
+    color: rgba(49, 46, 44, 1);
+}
+
+h2 {
+    font-family: 'Young Serif Regular', serif;
+    font-size: 28px;
+    color: rgba(133, 70, 50, 1);
+}
+
+h3 {
+    font-size: 20px;
+    color: rgba(122, 40, 78, 1);
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(95, 86, 77, 1);
+}
+
+ul, ol {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 8px;
+}
+
+ul li::before {
+    content: '•';
+    display: inline-block;
+    width: 16px;
+    margin-right: 16px;
+    color: rgba(133, 70, 50, 1);
+}
+
+ol {
+    margin-left: 8px;
+    padding-left: 8px;
+    list-style-position: outside;
+}
+
+ol ::marker {
+    font-weight: 700;
+    color: rgba(133, 70, 50, 1);
+}
+
+hr {
+    color: rgba(227, 221, 215, 1);
+}
+
+.prep-time-sect, .ingredients-sect, .instructions-sect, .nutrition-sect {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.recipe-sect {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.title-sect {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.prep-time-sect {
+    padding: 24px;
+    background-color: rgba(255, 247, 251, 1);
+    border-radius: 12px;
+}
+
+.nutrition-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nutrition-info {
+    display: flex;
+    padding: 0 32px;
+}
+
+.nutrition-info p {
+    width: 100%;
+}
+
+.nutrition-info p:last-child {
+    font-weight: 700;
+    color: rgba(133, 70, 50, 1);
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        background: white;
+    }
+
+    main {
+        margin: 0;
+        border-radius: 0;
+    }
+}
