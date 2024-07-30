@@ -1,0 +1,72 @@
+@use 'mixins' as m;
+
+// Colors Shades
+$colors: (
+        'rose': (
+                50: '#FFF7FB',
+                800: '#7A284E'
+        ),
+        'stone': (
+                900: '#312E2C',
+                600: '#5F564D',
+                150: '#E3DDD7',
+                100: '#F3E5D7'
+        ),
+        'brown': (
+                800: '#854632'
+        ),
+        'white': (
+                500: '#FFFFFF'
+        ),
+);
+
+// Breakpoints
+$breakpoints: (
+        'medium': 37.5rem,
+);
+
+@mixin breakpoint($size) {
+        @media (max-width: map-get($breakpoints, $size)) {
+                @content;
+        }
+}
+
+// Font Properties
+$font-size: (
+        500: 1rem,
+        600: 1.25rem,
+        700: 1.75rem,
+        800: 2.25rem,
+        900: 2.5rem,
+);
+
+$line-height: (
+        m: 1.0,
+        l: 1.5,
+);
+
+// Dimensions
+$spacing: (
+        1600: 8rem,
+        600: 3rem,
+        500: 2.5rem,
+        400: 2rem,
+        300: 1.5rem,
+        200: 1rem,
+        150: 0.75rem,
+        100: 0.5rem,
+);
+
+$border-radius: (
+        medium: 0.75rem,
+        large: 1.5rem,
+);
+
+// Root
+:root {
+        @include m.nested-map-to-root(clr, $colors);
+        @include m.nested-map-to-root(fs, $font-size);
+        @include m.nested-map-to-root(lh, $line-height);
+        @include m.nested-map-to-root(sp, $spacing);
+        @include m.nested-map-to-root(br, $border-radius);
+}
