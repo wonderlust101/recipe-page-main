@@ -16,7 +16,7 @@ h1 {
   font-family: 'Young Serif', serif;
   font-size: var(--fs-900);
   font-weight: 500;
-  line-height: 1.0;
+  line-height: var(--lh-m);
   color: var(--clr-stone-900);
 }
 
@@ -41,5 +41,6 @@ p {
 }
 
 li, td {
+  line-height: var(--lh-l);
   color: var(--clr-stone-600);
 }
