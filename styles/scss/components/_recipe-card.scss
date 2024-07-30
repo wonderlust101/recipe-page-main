@@ -1,0 +1,84 @@
+@use '../abstract' as a;
+
+.recipe-card {
+  width: min(calc(100% - 3rem), 46rem);
+  padding: var(--sp-500);
+  border-radius: var(--br-large);
+  background-color: var(--clr-white-500);
+
+  @include a.breakpoint(medium) {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  &__image {
+    border-radius: var(--br-medium);
+    margin-bottom: var(--sp-500);
+
+    @include a.breakpoint(medium) {
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__recipe {
+    display: grid;
+    gap: var(--sp-400);
+
+    @include a.breakpoint(medium) {
+      padding: var(--sp-500) var(--sp-400);
+    }
+  }
+
+  &__recipe > * {
+    display: grid;
+    gap: var(--sp-300);
+  }
+
+  &__prep-time {
+    padding: var(--sp-300);
+    border-radius: var(--br-medium);
+    background-color: var(--clr-rose-50);
+  }
+
+  &__list {
+    padding-left: var(--sp-300);
+
+    & > * {
+      padding-left: var(--sp-200);
+      margin-bottom: var(--sp-100);
+    }
+
+    & ::marker {
+      color: var(--clr-brown-800);
+      font-weight: 700;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  &__table-row {
+    & *:first-child {
+      padding-left: var(--sp-150);
+    }
+
+    &:not(:last-child) > * {
+      border-bottom: 1px solid var(--clr-stone-150);
+      padding-bottom: var(--sp-150);
+    }
+
+    &:not(:first-child) > * {
+      padding-top: var(--sp-150);
+    }
+
+    &--bold {
+      font-weight: 700;
+      color: var(--clr-brown-800);
+    }
+  }
+}

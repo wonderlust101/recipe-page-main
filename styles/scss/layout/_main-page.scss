@@ -1,0 +1,11 @@
+@use '../abstract' as a;
+
+body {
+  display: grid;
+  justify-items: center;
+  margin: var(--sp-1600) 0;
+
+  @include a.breakpoint(medium){
+    margin: 0;
+  }
+}

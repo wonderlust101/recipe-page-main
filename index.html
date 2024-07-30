@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles/css/main.css">
 
     <title>Frontend Mentor | Recipe page</title>
 </head>
 <body>
-    <main>
-        <img src="assets/images/image-omelette.jpeg" alt="omelette">
+    <main class="recipe-card">
+        <img src="assets/images/image-omelette.jpeg" alt="omelette" class="recipe-card__image">
 
-        <div class="recipe-sect">
-            <div class="title-sect">
+        <div class="recipe-card__recipe">
+            <div class="recipe-card__title">
                 <h1>Simple Omelette Recipe</h1>
                 <p>
                     An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
@@ -22,18 +22,20 @@
                 </p>
             </div>
 
-            <div class="prep-time-sect">
+            <div class="recipe-card__prep-time">
                 <h3>Preparation time</h3>
-                <ul>
+
+                <ul class="recipe-card__list">
                     <li><strong>Total:</strong> Approximately 10 minutes</li>
                     <li><strong>Preparation:</strong> 5 minutes</li>
                     <li><strong>Cooking:</strong> 5 minutes</li>
                 </ul>
             </div>
 
-            <div class="ingredients-sect">
+            <div class="recipe-card__ingredients">
                 <h2>Ingredients</h2>
-                <ul>
+
+                <ul class="recipe-card__list">
                     <li>2-3 large eggs</li>
                     <li>Salt, to taste</li>
                     <li>Pepper, to taste</li>
@@ -43,9 +45,10 @@
             </div>
 
             <hr>
-            <div class="instructions-sect">
+
+            <div class="recipe-card__instructions">
                 <h2>Instructions</h2>
-                <ol>
+                <ol class="recipe-card__list">
                     <li>
                         <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed.
                         You can add a tablespoon of water or milk for a fluffier texture.
@@ -73,30 +76,23 @@
 
             <hr>
 
-            <div class="nutrition-sect">
+            <div>
                 <h2>Nutrition</h2>
                 <p>The table below shows nutritional values per serving without the additional fillings.</p>
-                <div class="nutrition-table">
-                    <div class="nutrition-info">
-                        <p>Calories</p>
-                        <p>277kcal</p>
-                    </div>
-                    <hr>
-                    <div class="nutrition-info">
-                        <p>Carbs</p>
-                        <p>0g</p>
-                    </div>
-                    <hr>
-                    <div class="nutrition-info">
-                        <p>Protein</p>
-                        <p>20g</p>
-                    </div>
-                    <hr>
-                    <div class="nutrition-info">
-                        <p>Fat</p>
-                        <p>22g</p>
-                    </div>
-                </div>
+                <table class="recipe-card__table">
+                    <tr class="recipe-card__table-row">
+                        <td>Calories</td>
+                        <td class="recipe-card__table-row--bold">277kcal</td>
+                    </tr>
+                    <tr class="recipe-card__table-row">
+                        <td>Carbs</td>
+                        <td class="recipe-card__table-row--bold">0g</td>
+                    </tr>
+                    <tr class="recipe-card__table-row">
+                        <td>Fat</td>
+                        <td class="recipe-card__table-row--bold">22g</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </main>
